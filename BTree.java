@@ -1,7 +1,22 @@
+// Let's Start Learning Binary Tree..!
+// Types of Tree
+// 	1- Full Binary Tree
+// 	2 - Complete Binary tree
+// 	3 - Perfect Binary Tree
+// 	4 - Balanced Binary Tree
+// 	5 - Degenerated Tree
+
+
+
+
+
+
 package Tree;
 import java.util.*;
 public class BinaryTree {
 	private Node root;
+	
+// 	Creating A tree 
 	private class Node
 	{
 		private Node left;
@@ -16,6 +31,7 @@ public class BinaryTree {
 	
 	 public void create()
 	 {
+// 		 tree nodes insertion
 		Node first=new Node(10);
 		Node second =new Node(8);
 		Node third = new Node(12);
@@ -35,7 +51,8 @@ public class BinaryTree {
 		third.right=seventh;
 	}
 	
-	public void inorder(Node root) {
+// 	Inorder Traversal
+	 void inorder(Node root) {
 		if(root==null) {
 			return;
 		}
@@ -44,7 +61,7 @@ public class BinaryTree {
 		inorder(root.right);
 	}
 	
-	
+// 	Postorder traversal
 	public void postorder(Node root) {
 		if(root==null) {
 			return;
@@ -54,6 +71,7 @@ public class BinaryTree {
 			System.out.print(root.data+ " ");
 		
 	}
+// 	pre-order Traversal
 	
 	public void preorder(Node root) {
 		if(root==null) {
