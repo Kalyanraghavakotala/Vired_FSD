@@ -7,6 +7,12 @@
 // 	5 - Degenerated Tree
 
 
+// 	Traversals:
+// 		DFS : inorder , preorder , postorder 
+// 		BFS :	level order
+
+	
+
 
 
 
