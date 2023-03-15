@@ -1,0 +1,107 @@
+Constraints..
+	1 --> Not null 
+		can be apply only column level
+	2 --> unique
+		can be define at column or table level
+	3 --> primary key
+		can be define at column or table level also
+	4 --> foreign key--
+		 Referential integrety constraints
+		
+		it identifies any column referencing a table
+		establiish the connect between two columns of same table
+		or different table
+		
+		the foreign key is defined in the chinld table and the table
+		containinig the referenced column in the parent table
+		
+		 
+		 
+		 
+	5 --> check  --- gender check(gender in('f','m','none');
+		 check allows you to define that you enter in a table
+			before you check
+		 also known as business integrety  rule 
+		 can be defined at table level only
+	6 --> default key -- defaul
+
+	
+child table 
+	making reference from parent table
+	
+	name references parenttable(name)
+	
+	
+	
+Foreign Key
+
+SQL> create table class
+  2  (
+  3  id number(4) primary key,
+  4  name varchar2(20) not null,
+  5  no_of_sub number(10)
+  6  );
+
+Table created.
+
+SQL> create table student
+  2  (
+  3  id number(4) references class(id),
+  4  name varchar2(20),
+  5  age number(10)
+  6  );
+
+Table created.
+
+SQL> insert into class values(&id,'&name',&number_of_sub);
+Enter value for id: 001
+Enter value for name: CSE
+Enter value for number_of_sub: 6
+old   1: insert into class values(&id,'&name',&number_of_sub)
+new   1: insert into class values(001,'CSE',6)
+
+1 row created.
+
+SQL> /
+Enter value for id: 112
+Enter value for name: ECE
+Enter value for number_of_sub: 10
+old   1: insert into class values(&id,'&name',&number_of_sub)
+new   1: insert into class values(112,'ECE',10)
+
+1 row created.
+
+SQL> insert into student values(&id,'&name',&age);
+Enter value for id: 001
+Enter value for name: kalyan
+Enter value for age: 22
+old   1: insert into student values(&id,'&name',&age)
+new   1: insert into student values(001,'kalyan',22)
+
+1 row created.
+
+SQL> /
+Enter value for id: 112
+Enter value for name: madhu
+Enter value for age: 19
+old   1: insert into student values(&id,'&name',&age)
+new   1: insert into student values(112,'madhu',19)
+
+1 row created.
+
+SQL> select * from class
+  2  ;
+
+        ID NAME                  NO_OF_SUB
+---------- -------------------- ----------
+         1 CSE                           6
+       112 ECE                          10
+
+SQL> select * from student;
+
+        ID NAME                        AGE
+---------- -------------------- ----------
+         1 kalyan                       22
+       112 madhu                        19
+	   
+.

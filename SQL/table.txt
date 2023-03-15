@@ -1,0 +1,66 @@
+TABLE-->
+
+creating table;
+	Create table table_name
+	
+	create table students
+  (
+    roll_no number(10),
+    name varchar2(20),
+    section char,
+    course varchar2(20),
+    year number(5)
+    );
+	
+	desc table 
+	 Name                            Null?    Type
+ --------------------------------- -------- ----------------------------
+ ROLL_NO                                      NUMBER(10)
+ NAME                                         VARCHAR2(20)
+ SECTION                                      CHAR(1)
+ COURSE                                       VARCHAR2(20)
+ YEAR                                         NUMBER(5)
+
+
+--> rename 
+	rename table_name to new table_name;
+---> desc (describe)
+	desc table_name;
+
+altering--
+-> modify
+-> add
+-> drop
+
+(adding new attributes)
+alter table table_name:
+ add ph_no;
+ add ...
+ 
+ SQL> alter table students
+  2  add marks number(5)
+  3  ;	
+
+Table altered.
+
+(modifying)
+alter table table name:
+	modify roll number(10)---change to 10;
+
+
+
+drop column-->
+
+SQL> alter table students
+  2  drop column year;
+
+Table altered.
+
+SQL> truncate table hi;
+
+Table truncated.
+// truncate updates  rows --> delets the rows;
+
+
+
+drop table table_name; --> table will be dropped

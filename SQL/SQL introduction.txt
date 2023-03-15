@@ -1,0 +1,42 @@
+create User with password:
+
+create user username identified by password;
+
+alter user username identified by new_password;
+drop user username;
+
+drop user username cascade;
+
+
+creating role to user:-
+
+create role role_name;
+
+grant role
+grant role_name to username;
+
+grant create session to username;
+
+grant create table to anshu;
+
+connect username/pass ;
+	gives connected:
+
+connect kalyan/0000;
+		username/pass;
+
+
+
+TABLE--->
+
+DATA-TYPES -
+		--> char -- single character
+		--> varchar(n) -- of length n
+		--> varchar2(n) -- for largeer strings	
+		--> date- DD-MON_YY (12-jan,22)
+		--> number
+		--> long
+
+DataBase -- 
+		-- A table is a database object whicj is used to
+		store data in relational database 

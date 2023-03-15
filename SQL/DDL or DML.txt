@@ -1,0 +1,86 @@
+DDL Commands-->  create , alter , delete , drop, truncate
+data definition language
+
+DML commands-->
+
+insert:  
+ insert into students values
+    (
+    529,
+    'kalyan',
+    'A',
+    'B-tech',
+    100
+    )
+    ;
+
+inserts values..
+
+method 2
+insert into students values(&a,&b,&c,&d,&e);
+
+enter value of a:
+enter value of b:
+enter value of c:
+enter value of d:
+enter value of e:
+	
+
+update :
+	update students set marks=110 where marks=90;
+
+condition:
+
+select * from students where marks=100;
+
+   ROLL_NO NAME                 S COURSE                    MARKS
+---------- -------------------- - -------------------- ----------
+       529 kalyan               A B-tech                      100
+       528 prabhu               A B-tech                      100
+
+delete 
+
+delete from students where marks=110;
+
+1 row deleted.
+select * from students;
+
+   ROLL_NO NAME                 S COURSE                    MARKS
+---------- -------------------- - -------------------- ----------
+       529 kalyan               A B-tech                      100
+       528 prabhu               A B-tech                      100
+       524 madhu                A B-Tech                      101
+
+
+drop;
+
+alter table students
+  2  drop column section;
+
+Table altered.
+
+SQL> select * from students;
+
+   ROLL_NO NAME                 COURSE                    MARKS
+---------- -------------------- -------------------- ----------
+       529 kalyan               B-tech                      100
+       528 prabhu               B-tech                      100
+       524 madhu                B-Tech                      101
+	   
+  
+  
+  
+  
+  
+ Creating Table.. emp
+ create table emp
+    (
+    eid number(5),
+    ename varchar2(20),
+    dep varchar2(10),
+    eage number(3),
+    gender char,
+    esalary number(10)
+    );
+	
+	

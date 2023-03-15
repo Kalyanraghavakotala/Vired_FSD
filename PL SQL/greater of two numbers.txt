@@ -1,0 +1,19 @@
+prog to check for two numbers --:
+
+declare
+a number;
+b number;
+begin
+a:=80;
+b:=80;
+if a>b then
+dbms_output.put_line('a');
+elsif b>a then
+dbms_output.put_line('b');
+else dbms_output.put_line('equal');
+end if;
+end;
+/
+
+output-->
+equal

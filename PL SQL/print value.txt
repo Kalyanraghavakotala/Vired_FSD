@@ -1,0 +1,13 @@
+set serveroutput on verify off;
+SQL> declare
+    a number;
+    b number;
+    begin
+    a:=10;
+    b:=20;
+    dbms_output.put_line('value of a is'|| a); -- || used to append the output like + in java
+    end;
+    / -- gives the output of the program
+output is :
+	value of a is 10
+	PL/SQL procedure successfully completed.

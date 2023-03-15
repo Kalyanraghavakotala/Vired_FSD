@@ -1,0 +1,25 @@
+to check greater in 3 numbers :-
+
+declare
+a number;
+b number;
+c number;
+begin
+a:=8;
+b:=2;
+c:=9;
+if a>b then
+if a>c then
+dbms_output.put_line('a is greater');
+else dbms_output.put_line('c is greater');
+end if;
+elsif b>c then
+dbms_output.put_line('a is greater');
+else dbms_output.put_line('c is greater');
+end if;
+end;
+/
+
+Output-->
+
+c is greater

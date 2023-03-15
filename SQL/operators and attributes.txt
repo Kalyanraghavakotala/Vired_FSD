@@ -1,0 +1,25 @@
+operators:-
+	or operator
+	like operator  -- gives output by checking the strings
+					-- %a - gives if 'a' present in last at strings
+					-- %a% - gives if 'a' present middle in strings
+					-- a% - gives if strind start with a
+		ex - select * from <table-name> where ename like('%a%');
+	in operator		-- used when you want to compare the column
+						similar to or condition
+						
+		ex - select * from emp where eid in(501,524,528);
+	between 100 and 1000;
+		gies values which contains in between 100 and 1000;
+	
+
+table attributes:-
+// to view the total table
+select * from emp;
+
+// to see the particular value by giving WHERE condition
+select * from emp where eage=20;
+
+select <colum_list> from <table> where x!=y;
+
+select <colum_list> from <table> where salary between 100 and 1000;

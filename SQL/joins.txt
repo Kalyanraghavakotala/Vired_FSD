@@ -1,0 +1,120 @@
+SQL joins
+used to combine column column from different tables
+
+4 types of joins..
+--> equi join
+--> caartesian join
+--> outer join
+--> self join
+
+	
+
+1) EQUI JOIN :-
+select table.name,table2.name,.......
+	from table1,table2,.......
+	where table1.name=table2.name;
+	
+SQL> select * from r1;
+
+FIRST_NAME           LAST_NAME                SALARY
+-------------------- -------------------- ----------
+kalyan               raghava                  100000
+shiva                sai                      500000
+prabhu               teja                    2500000
+
+SQL> select * from r2;
+
+LAST_NAME            G        AGE
+-------------------- - ----------
+raghava              M         20
+teja                 M     450000
+keelu                M         16
+
+
+SQL> select first_name,salary,age from r1,r2 where r1.last_name=r2.last_name;
+
+FIRST_NAME               SALARY        AGE
+-------------------- ---------- ----------
+kalyan                   100000         20
+prabhu                  2500000     450000
+
+
+2) certesian product of two tables:-
+
+SQL> select * from r1;
+
+FIRST_NAME           LAST_NAME                SALARY
+-------------------- -------------------- ----------
+kalyan               raghava                  100000
+shiva                sai                      500000
+prabhu               teja                    2500000
+
+SQL> select * from r2;
+
+LAST_NAME            G        AGE
+-------------------- - ----------
+raghava              M         20
+teja                 M     450000
+keelu                M         16
+
+SQL> select first_name,salary,age from r1,r2;
+
+FIRST_NAME               SALARY        AGE
+-------------------- ---------- ----------
+kalyan                   100000         20
+kalyan                   100000     450000
+kalyan                   100000         16
+shiva                    500000         20
+shiva                    500000     450000
+shiva                    500000         16
+prabhu                  2500000         20
+prabhu                  2500000     450000
+prabhu                  2500000         16
+
+9 rows selected.
+
+
+
+3) outer join :
+	sql join return all rows from both tables that satisfies the given condition
+	
+	
+	outer join returns that having not correspoinding values
+	it is used on one side of join condition only
+	
+SQL> select first_name,salary,age from r1,r2 where r1.last_name=r2.last_name(+);
+
+FIRST_NAME               SALARY        AGE
+-------------------- ---------- ----------
+kalyan                   100000         20
+prabhu                  2500000     450000
+shiva                    500000
+
+SQL> select first_name,salary,age from r1,r2 where r1.last_name(+)=r2.last_name;
+
+FIRST_NAME               SALARY        AGE
+-------------------- ---------- ----------
+kalyan                   100000         20
+prabhu                  2500000     450000
+                                        16
+.
+	
+	
+4) self join :
+
+
+******* VIEWS *********
+
+select * from empl;
+
+        ID NAME                        AGE     SALARY
+---------- -------------------- ---------- ----------
+       529 kalyan                       20      10000
+       540 ajay                         14     500000
+       528 prabhu                       23      45000
+       228 raghava                      21     120000
+       524 madhu                        45      67565
+       526 hemanth                      12      45241
+       584 harish                       21      65241
+
+7 rows selected.

@@ -1,0 +1,30 @@
+VIEWS-->
+
+SQL> create view virtual as
+  2  select * from empl where age<20;
+
+View created.
+
+SQL> select * from virtual;
+
+        ID NAME                        AGE     SALARY
+---------- -------------------- ---------- ----------
+       540 ajay                         14     500000
+       526 hemanth                      12      45241
+.
+
+SQL> create or replace view virtual as select * from empl where id<600;
+
+SQL> select * from virtual;
+
+        ID NAME                        AGE     SALARY
+---------- -------------------- ---------- ----------
+       529 kalyan                       20      10000
+       540 ajay                         14     500000
+       528 prabhu                       23      45000
+       228 raghava                      21     120000
+       524 madhu                        45      67565
+       526 hemanth                      12      45241
+       584 harish                       21      65241
+
+7 rows selected.

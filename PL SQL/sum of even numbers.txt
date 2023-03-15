@@ -1,0 +1,26 @@
+SQL> declare
+  2  n number;
+  3  r number;
+  4  i number;
+  5  s number;
+  6  begin
+  7  n:=&n;
+  8  s:=0;
+  9  for i IN 1..n
+ 10  loop
+ 11  r:=MOD(i,2);
+ 12  if r=0 then
+ 13  dbms_output.put_line(i);
+ 14  s:=s+i;
+ 15  end if;
+ 16  end loop;
+ 17  dbms_output.put_line(s);
+ 18  end;
+ 19  /
+Enter value for n: 10
+2
+4
+6
+8
+10
+30
