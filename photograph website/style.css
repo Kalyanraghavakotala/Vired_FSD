@@ -1,0 +1,144 @@
+/* Global styles */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+}
+
+#userpic {
+    height: 50px;
+    width: 50px;
+}
+
+h1 {
+    margin: 0;
+    font-size: 2rem;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+}
+
+nav li {
+    margin: 0 1rem;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+}
+
+a {
+    display: inline-block;
+    padding: 1rem;
+    background-color: #333;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 1rem;
+}
+
+a:hover {
+    background-color: #666;
+}
+
+/* Section styles */
+
+section {
+    padding: 2rem;
+}
+
+section h2 {
+    margin-top: 0;
+    font-size: 2rem;
+}
+
+section ul {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+}
+
+section li {
+    overflow: hidden;
+    border-radius: 5px;
+}
+
+section img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.5s ease-in-out;
+}
+
+section img:hover {
+    transform: scale(1.1);
+}
+
+section p {
+    margin-top: 0;
+    font-size: 1.2rem;
+}
+
+section form {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+header img {
+    height: 70px;
+    width: 70px;
+}
+
+section label {
+    font-size: 1.2rem;
+}
+
+section input,
+section textarea {
+    padding: 0.5rem;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    border: 1px solid rgb(4, 4, 4);
+    color: #333;
+}
+
+section input[type="submit"] {
+    background-color: #333;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: bold;
+    border: none;
+    padding: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Footer styles */
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+}
+
+footer p {
+    margin: 0;
+    font-size: 1.2rem;
+}

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>My Photography Website</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <img src="logo.jpg" alt="">
+        <h1>Nature Clicks</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="home">
+            <h2>Welcome to My Photography Website</h2>
+            <p>Here you will find some of my favorite photos. Feel free to browse and get in touch if you're interested
+                in purchasing prints or booking a session.</p>
+
+        </section>
+        <section id="portfolio">
+            <h2>Portfolio</h2>
+            <ul>
+                <li><img src="photo1.jpg" alt="Photo 1"></li>
+                <li><img src="photo2.jpg" alt="Photo 2"></li>
+                <li><img src="photo3.jpg" alt="Photo 3"></li>
+                <li><img src="photo4.avif" alt="Photo 4"></li>
+                <li><img src="photo5.jpg" alt="Photo 5"></li>
+                <li><img src="photo6.jpg" alt="Photo 6"></li>
+            </ul>
+        </section>
+        <section id="about">
+            <h2>About Me</h2>
+            <img id="userpic" src="user.jpg" alt="Me">
+            <p>Hi, I'm Raghava, a photographer based in <b>India</b>. I specialize in <u>Nature</u>
+                photography, and I love capturing nature.</p>
+        </section>
+        <section id="contact">
+            <h2>Contact Me</h2>
+            <form>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" placeholder="Enter Your Name" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Enter Your Email" required>
+                <label for="mobile">Mobile:</label>
+                <input type="number" id="number" name="number" placeholder="Enter Your Mobile Number" required>
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea>
+                <input type="submit" value="Send">
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>@copy; 2023 My Photography</p>
+    </footer>
+</body>
+
+</html>
