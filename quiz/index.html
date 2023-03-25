@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Quiz</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="quiz-container">
+        <h1>Quiz</h1>
+        <form id="quiz-form">
+            <p>1. What is the capital of France?</p>
+            <label>
+                <input type="radio" name="q1" value="a"> a. Paris
+            </label><br>
+            <label>
+                <input type="radio" name="q1" value="b"> b. London
+            </label><br>
+            <label>
+                <input type="radio" name="q1" value="c"> c. New York
+            </label><br>
+            <p>2. What is the largest country in the world by area?</p>
+            <label>
+                <input type="radio" name="q2" value="a"> a. Russia
+            </label><br>
+            <label>
+                <input type="radio" name="q2" value="b"> b. China
+            </label><br>
+            <label>
+                <input type="radio" name="q2" value="c"> c. United States
+            </label><br>
+            <p>3. What is the capital of Australia?</p>
+            <label>
+                <input type="radio" name="q3" value="a"> a. Melbourne
+            </label><br>
+            <label>
+                <input type="radio" name="q3" value="b"> b. Sydney
+            </label><br>
+            <label>
+                <input type="radio" name="q3" value="c"> c. Canberra
+            </label><br>
+            <p>4. What is the largest ocean in the world?</p>
+            <label>
+                <input type="radio" name="q4" value="a"> a. Atlantic
+            </label><br>
+            <label>
+                <input type="radio" name="q4" value="b"> b. Indian
+            </label><br>
+            <label>
+                <input type="radio" name="q4" value="c"> c. Pacific
+            </label><br>
+            <p>5. What is the highest mountain in the world?</p>
+            <label>
+                <input type="radio" name="q5" value="a"> a. Mount Everest
+            </label><br>
+            <label>
+                <input type="radio" name="q5" value="b"> b. K2
+            </label><br>
+            <label>
+                <input type="radio" name="q5" value="c"> c. Kilimanjaro
+            </label><br>
+            <br>
+            <button type="submit">Submit</button>
+            <button type="button" onclick="resetQuiz()">Reset</button>
+        </form>
+        <div id="quiz-results"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
