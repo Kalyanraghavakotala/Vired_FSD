@@ -1,0 +1,30 @@
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.util.regex.*;
+
+public class Solution {
+
+ public static void main(String[] args) {
+        Scanner s = new Scanner(System.in);
+        int t = s.nextInt();
+        String [] lp = new String[t];
+        String [] rp = new String[t];
+        
+        for (int i = 0; i < t; i++) {
+            lp[i] = s.next();
+            rp[i] = s.next();
+        }
+ HashSet<ArrayList> hs = new HashSet<>();
+    for(int i=0; i<t; i++){
+        ArrayList<String> arr = new ArrayList<>();
+        arr.add(lp[i]);
+        arr.add(rp[i]);
+
+        hs.add(arr);
+        System.out.println(hs.size());
+    }
+
+
+    }
+}

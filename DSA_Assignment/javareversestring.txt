@@ -1,0 +1,30 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        
+        Scanner sc=new Scanner(System.in);
+        String A=sc.next();
+        int i=0;
+        int j=A.length()-1;
+        String k="";
+        while(i<=j)
+        {
+            if(A.charAt(i)!=A.charAt(j))
+            {
+                k="No";
+                break;
+            }
+            i++;
+            j--;
+        }
+        if(k.equals("No"))
+        System.out.println("No");
+        else
+        System.out.println("Yes");        
+    }
+}
+
+

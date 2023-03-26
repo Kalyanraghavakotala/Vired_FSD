@@ -1,0 +1,45 @@
+import java.io.*;
+import java.math.*;
+import java.security.*;
+import java.text.*;
+import java.util.*;
+import java.util.concurrent.*;
+import java.util.regex.*;
+
+
+
+public class Solution {
+    public static void main(String[] args) throws IOException {
+        BufferedReader buf = new BufferedReader(new InputStreamReader(System.in));
+
+        List<List<Integer>> arr = new ArrayList<>();
+
+        for (int i = 0; i < 6; i++) {
+            String[] RowTempItems = buf.readLine().replaceAll("\\s+$", "").split(" ");
+
+            List<Integer> RowItems = new ArrayList<>();
+
+            for (int j = 0; j < 6; j++) {
+                int Item = Integer.parseInt(RowTempItems[j]);
+                RowItems.add(Item);
+            }
+
+            arr.add(RowItems);
+        }
+          int sum=Integer.MIN_VALUE;
+    int temp=0;
+    for (int i=1;i<5;i++){
+        for (int j=1;j<5;j++){
+            temp=arr.get(i).get(j)+arr.get(i-1).get(j-1)+arr.get(i-1).get(j)+arr.get(i-1).get(j+1)+arr.get(i+1).get(j-1)+arr.get(i+1).get(j)+arr.get(i+1).get(j+1);
+            if(temp>sum){
+            sum=temp;
+            }
+        }
+
+
+    }
+    System.out.println(sum);
+
+        buf.close();
+    }
+}
